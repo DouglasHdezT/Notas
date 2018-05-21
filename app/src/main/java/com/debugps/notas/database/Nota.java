@@ -9,7 +9,7 @@ public class Nota {
     public Nota() {
     }
 
-    public Nota(String id, String catedratico, String materia, String nota) {
+    public Nota(String id,String nota,String catedratico , String materia) {
         this.id = id;
         this.catedratico = catedratico;
         this.materia = materia;

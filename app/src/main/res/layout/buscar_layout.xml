@@ -21,7 +21,7 @@
         android:layout_marginBottom="8dp">
 
         <EditText
-            android:id="@+id/Buscar_id"
+            android:id="@+id/buscar_id"
             android:inputType="number"
             android:hint="Carnet"
             android:gravity="center"
