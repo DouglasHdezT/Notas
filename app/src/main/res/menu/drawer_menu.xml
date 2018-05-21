@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all">
+
+        <item
+            android:id="@+id/ingresar_nav"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Ingresar"/>
+
+        <item
+            android:id="@+id/mostrar_nav"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Mostrar"/>
+
+        <item
+            android:id="@+id/actualizar_nav"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Actualizar"/>
+
+        <item
+            android:id="@+id/buscar_nav"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Buscar"/>
+
+    </group>
+
+</menu>
