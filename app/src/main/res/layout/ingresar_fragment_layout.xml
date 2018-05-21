@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:text="INGRESAR NOTA"
+        android:layout_marginBottom="16dp"
+        />
+
+    <EditText
+        android:id="@+id/input_id"
+        android:hint="Carnet"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        />
+
+    <EditText
+        android:id="@+id/input_materia"
+        android:hint="Materia"
+        android:gravity="center"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        />
+
+    <EditText
+        android:id="@+id/input_Catedratico"
+        android:hint="Catedratico"
+        android:gravity="center"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        />
+
+    <EditText
+        android:id="@+id/input_nota"
+        android:hint="Nota"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        />
+
+
+    <Button
+        android:layout_margin="16dp"
+        android:text="INGRESAR"
+        android:id="@+id/ingresar_btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

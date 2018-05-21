@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="7dp"
+    app:cardUseCompatPadding="true"
+    android:elevation="7dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cardview_materia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="MATERIA"
+            android:layout_marginBottom="8dp"
+            />
+
+        <TextView
+            android:id="@+id/cardview_catedratico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="Catedratico"
+            android:layout_marginBottom="8dp"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cardview_carnet"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text="Carnet"
+                />
+
+            <TextView
+                android:id="@+id/cardview_nota"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text="Nota"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
