@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements FragControl {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
         fragmentTransaction.replace(R.id.main_frame_layout, new MainFragment());
+        fragmentTransaction.addToBackStack("MainFrag");
 
         fragmentTransaction.commit();
 
