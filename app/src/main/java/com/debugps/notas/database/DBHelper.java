@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -98,14 +99,20 @@ public class DBHelper extends SQLiteOpenHelper {
         String [] campos = {CAMPO_ID,CAMPO_NOTA,CAMPO_CATEDRATICO, CAMPO_MATERIA};
 
         try{
-            Cursor cursor =  db.query(TABLA_USUARIOS, campos, CAMPO_ID+"=?", parametros, null,null,null);
+            Cursor cursor =  db.rawQuery("SELECT * FROM "+TABLA_USUARIOS, null);
             cursor.moveToFirst();
-            p = new Nota(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
-            notas.add(p);
+            while(!cursor.isAfterLast()){
+                Log.d("Holi", cursor.getCount()+"f");
+                p = new Nota(cursor.getString(cursor.getColumnIndex(CAMPO_ID)), cursor.getString(cursor.getColumnIndex(CAMPO_NOTA)),
+                        cursor.getString(cursor.getColumnIndex(CAMPO_CATEDRATICO)), cursor.getString(cursor.getColumnIndex(CAMPO_MATERIA)));
+                notas.add(p);
+                cursor.moveToNext();
+            }
         }catch (Exception e){
             p=null;
         }
 
+        Log.d("Holi", notas.size()+"");
         return notas;
     }
 }
