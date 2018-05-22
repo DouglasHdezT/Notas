@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements FragControl {
     public void iniciarFragmento(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_frame_layout, fragment);
-        fragmentTransaction.addToBackStack("MainFrag");
         fragmentTransaction.commit();
     }
 }

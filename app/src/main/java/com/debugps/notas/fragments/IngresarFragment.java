@@ -1,5 +1,6 @@
 package com.debugps.notas.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.debugps.notas.R;
 import com.debugps.notas.database.DBHelper;
 import com.debugps.notas.database.Nota;
+import com.debugps.notas.interfaces.FragControl;
 
 public class IngresarFragment extends Fragment {
 
@@ -23,6 +25,7 @@ public class IngresarFragment extends Fragment {
     private EditText materia_edit;
 
     private Button ingresarBtn;
+    private FragControl fragControl;
 
     public IngresarFragment() {
     }
@@ -53,10 +56,29 @@ public class IngresarFragment extends Fragment {
                     Toast.makeText(IngresarFragment.this.getContext(), "Campos vacios", Toast.LENGTH_SHORT).show();
                 }else{
                     dbHelper.add(new Nota(id_text, nota_text, catedreatico_text, materia_text));
+                    fragControl.iniciarFragmento(new MainFragment());
+
                 }
             }
         });
 
         return view;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if(context instanceof FragControl){
+            fragControl = (FragControl) context;
+        }else{
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        fragControl =null;
     }
 }
